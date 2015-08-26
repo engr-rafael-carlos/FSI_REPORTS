@@ -119,7 +119,7 @@ public class ListData {
         return status;
     }
 
-    public static boolean loadInspectorDetails(String username) {
+    public static boolean loadInspectorDetails(String email) {
         /* Initialization */
         boolean status = false;
         Connection conn = null;
@@ -131,7 +131,7 @@ public class ListData {
             conn = DBConnection.startConnection();
             /* Setting Query */
             String query = "select * from inspector_details where company_id='" + var.getCompany_id() +
-                    "' and inspector_username='" + username +"';";
+                    "' and inspector_email='" + email +"';";
             pst = conn.prepareStatement(query);
             /* Executing Query */
             rs = pst.executeQuery();
