@@ -13,11 +13,11 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
   display: block;
   position: absolute;
   color: white;
-  border: 2px solid white;
+/*  border: 2px solid white;*/
   border-radius: 16px;
   text-align: center;
   line-height: 14px;
-  box-shadow: 0 0 3px #444;
+/*  box-shadow: 0 0 3px #444;*/
   box-sizing: content-box;
   content: '+';
   background-color: #31b131;
@@ -63,11 +63,11 @@ table.dataTable.dtr-column > tbody > tr > th.control:before {
   display: block;
   position: absolute;
   color: white;
-  border: 2px solid white;
+/*  border: 2px solid white;*/
   border-radius: 16px;
   text-align: center;
   line-height: 14px;
-  box-shadow: 0 0 3px #444;
+/*  box-shadow: 0 0 3px #444;*/
   box-sizing: content-box;
   content: '+';
   background-color: #31b131;

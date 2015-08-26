@@ -17,8 +17,8 @@ Last Update: August 26, 2015
 <%fsi.classes.ListData.list_cbuildings();%>
 <div class="container-fluid">
     <div class="row">
-        <button class="btn btn-warning" data-toggle="modal" data-target="#b_modal_create">Add Building</button><!-- edit -->
-        <table class="table exo-l" cellspacing="0" id="list-building" width="100%">
+        <button class="btn btn-warning" data-toggle="modal" data-target="#b_modal_create" style="margin-bottom:7px">Add Building</button><!-- edit -->
+        <table class="table hover exo-l" cellspacing="0" id="list-building" width="100%">
             <thead>
                 <tr>
                     <th>Building ID</th>
@@ -79,7 +79,8 @@ Last Update: August 26, 2015
             ordering: true,
             searching: true,
             paging: true,
-            lengthChange: false
+            lengthChange: true,
+            responsive: true
         });
     });
 </script>
