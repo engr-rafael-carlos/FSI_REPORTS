@@ -6,7 +6,7 @@ import java.sql.*;
  */
 public class Validation {
     /* Validate Login Credentials*/
-    public static boolean validate_account(String username, String password) {
+    public static boolean validate_account(String email, String password, String purpose) {
         /* Initialization */
         boolean status = false;
         Connection conn = null;
@@ -20,8 +20,8 @@ public class Validation {
             conn = DBConnection.startConnection();
 
             /* Setting Query */
-            pst = conn.prepareStatement("select * from login_details where username=?;");
-            pst.setString(1, username);
+            pst = conn.prepareStatement("select * from login_details where email=?;");
+            pst.setString(1, email);
 
             /* Executing Query */
             rs = pst.executeQuery();
@@ -30,9 +30,15 @@ public class Validation {
             if (rs.next()) {
                 String dbpass = HashPassword.decrypt_salt(rs.getString("password"));
                 if(dbpass.equals(userpass)) {
-                    Variables var = Variables.getInstance();
-                    var.setCompany_id(rs.getString("company_id"));
-                    var.setAccount_type(rs.getString("account_type"));
+                    if(purpose.equals("login")) { /* Validation of Login */
+                        Variables var = Variables.getInstance();
+                        var.setCompany_id(rs.getString("company_id"));
+                        var.setAccount_type(rs.getString("account_type"));
+                    }
+                    else {
+                        /* Password Check for Old Password */
+                        /* Do Nothing */
+                    }
                     status = true;
                 }
             } else {

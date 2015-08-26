@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 public class CreateData {
     public static boolean createInspector(String inspector_id, String
             inspector_name, String inspector_address, String inspector_contact,
-            String inspector_username, String inspector_password){
+            String inspector_email, String inspector_password){
         /* Initialization */
         boolean status = false;
         Connection conn = null;
@@ -24,45 +24,45 @@ public class CreateData {
         try {
             /* Start Database Connection */
             conn = DBConnection.startConnection();
-
+            
             /* Setting Query for Login Details */
-            pst = conn.prepareStatement("insert into login_details (username," +
+            pst = conn.prepareStatement("insert into login_details (email," +
                     "password, account_type, company_id, inspector_id) VALUES (?,?,?,?,?);");
-            pst.setString(1,inspector_username);
-            pst.setString(2,encrypted_password);
-            pst.setString(3,"inspector");
+            pst.setString(1, inspector_email);
+            pst.setString(2, encrypted_password);
+            pst.setString(3, "inspector");
             pst.setString(4, var.getCompany_id());
-            pst.setString(4, var.getInspector_id());
-
-            String login_details = "insert into login_details (username,password," +
-                    " account_type, company_id, inspector_id) VALUES ('" + inspector_username +
+            pst.setString(4, inspector_id);
+            String login_details = "insert into login_details (email,password," +
+                    " account_type, company_id, inspector_id) VALUES ('" + inspector_email +
                     "','" + encrypted_password + "','inspector','" + var.getCompany_id() +
-                    "','" + var.getInspector_id() + "');";
+                    "','" + inspector_id + "');";
 
             /* Executing Query for Login Detail */
             pst.executeUpdate(login_details);
 
             /* Setting Query for Inspector Details */
-//            pst = conn.prepareStatement("insert into inspector_details (" +
-//                    "inspector_id, company_id, inspector_name, " +
-//                    "inspector_address, inspector_contact, " +
-//                    "inspector_username) VALUES (?,?,?,?,?,?);");
-//            pst.setString(1,inspector_id);
-//            pst.setString(2,var.getCompany_id());
-//            pst.setString(3,inspector_name);
-//            pst.setString(4,inspector_address);
-//            pst.setString(5,inspector_contact);
-//            pst.setString(6,inspector_username);
-            String inspector_details = "insert into inspector_details (" +
+            pst = conn.prepareStatement("insert into inspector_details (" +
                     "inspector_id, company_id, inspector_name, " +
                     "inspector_address, inspector_contact, " +
-                    "inspector_username) VALUES ('" + inspector_id +
-                    "','" + var.getCompany_id() + "','" + inspector_name +
-                    "','" + inspector_address + "','" + inspector_contact +
-                    "','" + inspector_username + "');";
+                    "inspector_email) VALUES (?,?,?,?,?,?);");
+            pst.setString(1,inspector_id);
+            pst.setString(2,var.getCompany_id());
+            pst.setString(3,inspector_name);
+            pst.setString(4,inspector_address);
+            pst.setString(5,inspector_contact);
+            pst.setString(6,inspector_email);
+            System.out.println(pst.toString());
+//            String inspector_details = "insert into inspector_details (" +
+//                    "inspector_id, company_id, inspector_name, " +
+//                    "inspector_address, inspector_contact, " +
+//                    "inspector_email) VALUES ('" + inspector_id +
+//                    "','" + var.getCompany_id() + "','" + inspector_name +
+//                    "','" + inspector_address + "','" + inspector_contact +
+//                    "','" + inspector_email + "');";
 
             /* Executing Query for Inspector Detail */
-            pst.executeUpdate(inspector_details);
+            pst.executeUpdate();
 
             status = true;
 

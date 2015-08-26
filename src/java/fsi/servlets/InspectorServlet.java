@@ -32,13 +32,13 @@ public class InspectorServlet extends HttpServlet {
             String name = request.getParameter("i_create_name");
             String address = request.getParameter("i_create_address");
             String contact = request.getParameter("i_create_contact");
-            String username = request.getParameter("i_create_username");
+            String email = request.getParameter("i_create_email");
             String password = request.getParameter("i_password");
 
-            boolean status = Validation.validateId("login_details","username",username);
+            boolean status = Validation.validateId("login_details","email",email);
             if(status == true) {
                 /* Username Already Exist */
-                out.println("<script type=\"text/javascript\">alert(\"Username Already Exist\")</script>");
+                out.println("<script type=\"text/javascript\">alert(\"Email Already Exist\")</script>");
             }
 
             status = Validation.validateId("inspector_details", "inspector_id", id);
@@ -48,7 +48,7 @@ public class InspectorServlet extends HttpServlet {
             }
 
             /* Account is Valid */
-            status = CreateData.createInspector(id,name,address,contact,username,password);
+            status = CreateData.createInspector(id,name,address,contact,email,password);
             if (status == true) {
                 /* Successfully Created */
                 out.println("<script type=\"text/javascript\">alert(\"Account Created\")</script>");

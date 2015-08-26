@@ -38,7 +38,7 @@ public class ListData {
             while(rs.next()) { /* Data Exist */
                 ArrayList<String> array = new ArrayList<String>();
                 array.add(rs.getString("inspector_id"));
-                array.add(rs.getString("inspector_username"));
+                array.add(rs.getString("inspector_email"));
                 array.add(rs.getString("inspector_name"));
                 array.add(rs.getString("inspector_address"));
                 array.add(rs.getString("inspector_contact"));

@@ -25,23 +25,23 @@ public class LoginServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         /* Get Inputs*/
-        String username = request.getParameter("username");
+        String email = request.getParameter("email");
         String password = request.getParameter("password");
 
         /* Store Data */
         Variables var = Variables.getInstance();
-        var.setLogin_username(username);
+        var.setLogin_username(email);
         var.setLogin_password(password);
 
         /* Checking Validation */
         boolean status;
-        status = Validation.validate_account(username, password);
+        status = Validation.validate_account(email, password, "login");
 
         if(status == true) {
             /* Login Successful */
 
             HttpSession session = request.getSession();
-            session.setAttribute("user", username);
+            session.setAttribute("user", email);
 
             String account_type = var.getAccount_type();
             session.setAttribute("type", account_type);
@@ -61,7 +61,7 @@ public class LoginServlet extends HttpServlet {
 
             } else { /* Inspector Account */
                 /* Initialize Details */
-                ListData.loadInspectorDetails(username);
+                ListData.loadInspectorDetails(email);
 
                 RequestDispatcher rd = request.getRequestDispatcher("dashboard.jsp");
                 rd.forward(request, response);

@@ -69,7 +69,7 @@ Last Update: August 5, 2015
 
                   <!--Input User-->
                   <div class="form-group">
-                    <input class="form-control" maxlength="255" placeholder="Username" name="username" required />
+                    <input class="form-control" maxlength="255" placeholder="Email" name="email" required />
                   </div>
 
                   <!--Input Password-->
