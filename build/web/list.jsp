@@ -47,6 +47,10 @@ Last Update: August 26, 2015
     <script src="js/plugins/dataTables.js"></script>
     <script src="js/plugins/dataTables-responsive.js"></script>
     
+    <!-- DateTimePicker -->
+    <script src="js/plugins/moment.js"></script>
+    <script src="js/plugins/bootstrap-datetimepicker.js"></script>
+    
     <script src="js/application.js"></script>
 </head>
 <body>
@@ -238,10 +242,12 @@ Last Update: August 26, 2015
 
                             <input class="form-control" placeholder="Date of Inspection" maxlength="255" id="b_update_doi" name="b_update_doi" />
                         </div>
+                        
+                        <!--DateTime Picker-->
                         <div class="form-group">
-
                             <input class="form-control" placeholder="Date Inspected" maxlength="255" id="b_update_di" name="b_update_di" />
                         </div>
+                                
                         <div class="form-group">
 
                             <input class="form-control" placeholder="Comment" maxlength="255" id="b_update_comm" name="b_update_comm" />
@@ -289,12 +295,22 @@ Last Update: August 26, 2015
                         <div class="form-group">
                             <input class="form-control" placeholder="Inspector ID" maxlength="255" name="b_create_iid" />
                         </div>
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Date of Inspection" maxlength="255" name="b_create_doi" />
+                        
+                        <!--DateTime Picker-->
+                        <div class="form-group">                            
+                            <div class='input-group date' id='datetimepicker1'>
+                                <input type='text' class="form-control" placeholder="Date of Inspection" maxlength="255" name="b_create_doi"/>
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
                         </div>
+                        
+                        
                         <div class="form-group">
                             <input class="form-control" placeholder="Comment" maxlength="255" name="b_create_comm" />
                         </div>
+                        
                         <div class="form-group">
                             <select class="form-control" name="b_create_stat" id="b_create_stat">
                                 <option value="Pending" selected>Pending</option>

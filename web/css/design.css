@@ -20,6 +20,9 @@
 /*Zozo Ui Tabs*/
 @import url("plugins/zozo.tabs.min.css");
 
+/*DateTime Picker*/
+@import url("plugins/bootstrap-datetimepicker.css");
+
 /*Sign In Style*/
 @import url("plugins/sign-in.css");
 

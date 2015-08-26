@@ -87,3 +87,14 @@ function btn_effect() {
         });
 
     });
+    
+    
+// ============== DateTime Picker ============== //
+
+    //For Add Building
+    $(function () {
+        $('#datetimepicker1').datetimepicker({
+            pickTime: false,
+            format: 'MM/DD/YYYY'
+        });
+    });
