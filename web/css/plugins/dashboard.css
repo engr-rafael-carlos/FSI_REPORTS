@@ -1,0 +1,143 @@
+/*Navigation Bar*/
+#navfsi.navbar.navbar-default.navbar-fixed-top{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d24726+0,f3b200+100 */
+    background: #d24726; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZDI0NzI2IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2YzYjIwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=");
+    background: -moz-linear-gradient(-45deg,  #d24726 0%, #f3b200 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#d24726), color-stop(100%,#f3b200)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  #d24726 0%,#f3b200 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg,  #d24726 0%,#f3b200 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  #d24726 0%,#f3b200 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #d24726 0%,#f3b200 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d24726', endColorstr='#f3b200',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+
+#navfsi a.navbar-brand.exo-m em,
+#navfsi.navbar-default .navbar-nav > li > a{
+    color:#fff;
+    background:transparent;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -ms-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+
+#navfsi.navbar-default .navbar-nav > li > a:hover{
+    color:#000;
+    background:#fff;
+}
+
+#navfsi.navbar-default .navbar-toggle{
+    border-radius:0px;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -ms-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+
+#navfsi.navbar-default .navbar-toggle:hover,
+#navfsi.navbar-default .navbar-toggle:focus,
+#navfsi.navbar-default .navbar-toggle:active{
+    background-color:rgba(255,255,255,0.3);
+}
+
+#navfsi.navbar-default .navbar-toggle .icon-bar{
+    background-color:#fff;
+}
+
+/*Thumbnails*/
+.thmb h3{
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+.thmb h2,
+.thmb h5{
+    margin-top:0px;
+    margin-bottom:5px;
+}
+
+.thmb h5{
+    color:#989898;
+}
+
+.thmb h5:last-child{
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+/*Panel*/
+.panel-default{
+    border:2px solid #ddd;
+}
+
+.panel-success{
+    border:2px solid #00a600;
+}
+
+.panel-danger{
+    border:2px solid #ff0000;
+}
+
+/*Text*/
+.text-success{
+    color:#00a600;
+}
+
+.text-danger{
+    color:#ff0000;
+}
+
+/*Button*/
+.btn-fsi{
+    width:100%;
+    border:#d24726;
+    border-color:#d24726;
+    border-radius:2px;
+    background-color:#d24726;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -ms-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+
+.btn-fsi:hover,
+.btn-fsi:focus,
+.btn-fsi.focus,
+.btn-fsi:active,
+.btn-fsi.active,
+.btn-fsi:visited{
+    background-color:#eb502c;
+}
+
+/*Divider*/
+hr{
+    margin-top:10px;
+    margin-bottom:10px;
+    border-top:1px solid #ddd
+}
+
+/*Footer*/
+footer{
+    background-color:#323232;
+}
+footer h6{
+    color:#fff;
+}
+
+@media (max-width:991px){
+    h2.text-success.status,
+    h2.text-danger.status,
+    h2.text-muted.status{
+        display:none;
+    }
+
+    div.mt65{
+        margin-top:25px !important;
+    }
+}
+

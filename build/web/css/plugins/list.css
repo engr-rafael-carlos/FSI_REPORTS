@@ -1,0 +1,81 @@
+/*tab font style*/
+a.z-link > h4.exo-m{
+    margin-top:0;
+    margin-bottom:0;
+    font-size:20px;
+    letter-spacing:0px;
+}
+
+.z-tabs.z-multiline > ul > li > a {
+    text-transform:none;
+}
+
+.z-tabs.z-multiline > ul.z-tabs-desktop > li > a.z-link > span,
+.z-tabs.z-multiline > ul.z-tabs-mobile > li > a.z-link > span > span{
+    font-size:14px;
+    margin-top:0;
+}
+
+/*parent tab color*/
+.z-tabs.horizontal.top.white.z-bordered > ul > li.z-active > a {
+    border-top:3px solid #d24726;
+}
+
+.z-tabs.white.z-bordered > ul > li.z-active > a {
+    color:#eb502c;
+}
+
+/*child table color*/
+.z-tabs.underlined.red > ul.z-tabs-nav > li.z-active > a,
+.z-tabs.underlined.red > ul.z-tabs-nav > li > a:hover{
+    border-color:#d24726;
+    color:#d24726;
+}
+
+.z-tabs.underlined.horizontal.xlarge > ul.z-tabs-nav > li > a.z-link{
+    padding:5px 14px;
+}
+
+span.z-title{
+    font-family: 'Exo', sans-serif;
+    font-weight:600;
+}
+
+/*dataTables Design*/
+table thead,
+table tfoot{
+    background-color: #d24726;
+    color:#fff;
+}
+
+table thead tr th,
+table tfoot tr th{
+    letter-spacing:1px;
+}
+
+.dataTables_info{
+    padding-bottom: 0.755em;
+    font-family:'Open-Sans';
+}
+
+.dataTables_length{
+    font-family:'Open-Sans';
+    margin-bottom: 5px;
+}
+
+div.dataTables_wrapper div.dataTables_filter label{
+    font-family:'Open-Sans';
+}
+
+/*Button Style*/
+button.btn.btn-warning,
+button.btn.btn-primary{
+    border-radius: 2px;
+    box-shadow: none;
+    font-family:'Open-Sans';
+    -webkit-transition: all 350ms ease;
+    -moz-transition: all 350ms ease;
+    -ms-transition: all 350ms ease;
+    -o-transition: all 350ms ease;
+    transition: all 350ms ease;
+}

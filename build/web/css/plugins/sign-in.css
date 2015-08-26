@@ -1,0 +1,73 @@
+/*Sign In Form Drop Shadow*/
+.box-shadow{
+    -webkit-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;
+    -moz-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;
+    box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px
+}
+
+/*Space in every side of whole form*/
+.padding{
+    padding: 15px;
+}
+
+/*Design of each Input Form*/
+#sign-in-form div.form-group input.form-control,
+#sign-in-form div.form-group select.form-control
+{
+    border-radius: 0px;
+    border: #eee;
+    background-color: #eee;
+    box-shadow: none;
+    font-family:'Open-Sans';
+    -webkit-transition: all 350ms ease;
+    -moz-transition: all 350ms ease;
+    -ms-transition: all 350ms ease;
+    -o-transition: all 350ms ease;
+    transition: all 350ms ease;
+}
+
+#sign-in-form div.form-group input.form-control:hover,
+#sign-in-form div.form-group select.form-control:hover,
+#sign-in-form div.form-group input.form-control:focus,
+#sign-in-form div.form-group select.form-control:focus{
+    border: #ddd;
+    background-color: #ddd;
+}
+
+/*Design of Sign In Button*/
+#sign-in-form div.form-group button.btn.btn-success.btn-block{
+    border-radius: 0;
+    border: 0;
+    background-color: #d24726;
+    font-family:'Open-Sans';
+    -webkit-transition: all 350ms ease;
+    -moz-transition: all 350ms ease;
+    -ms-transition: all 350ms ease;
+    -o-transition: all 350ms ease;
+    transition: all 350ms ease;
+}
+
+#sign-in-form div.form-group button.btn.btn-success.btn-block:hover,
+#sign-in-form div.form-group button.btn.btn-success.btn-block:focus{
+    background-color: #b94826;
+}
+
+/*Checkbox Design*/
+input[type="checkbox"].checkbox-success{
+    height: 15px;
+    width: 15px;
+    margin-top:2px;
+    border: 1px solid #000;
+    border-radius: 0;
+    background-color: #fff;
+}
+
+/*Forgot Password Design*/
+#sign-in-form div.col-xs-6.text-right a{
+    text-decoration: none;
+    color: #43494d
+}
+
+.input-error{
+    border-left: 2px solid red;
+}
