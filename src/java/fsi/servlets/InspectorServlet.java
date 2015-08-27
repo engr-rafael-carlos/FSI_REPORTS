@@ -79,8 +79,8 @@ public class InspectorServlet extends HttpServlet {
             /* No Method */
             out.println("<script type=\"text/javascript\">alert(\"Failed\")</script>");
         }
-        RequestDispatcher rd = request.getRequestDispatcher("list.jsp");
-        rd.forward(request, response);
+        
+        response.sendRedirect("list.jsp");
         
         out.close();
     }

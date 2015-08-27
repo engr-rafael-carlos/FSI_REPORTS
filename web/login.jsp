@@ -44,6 +44,20 @@ Last Update: August 5, 2015
 </head>
 
 <body class="open-sans">
+    <% /* Checking Session */
+        if(session.getAttribute("user") != null)
+        {
+            if(session.getAttribute("type").equals("company")) {
+                response.sendRedirect("list.jsp");
+            }
+            else if(session.getAttribute("type").equals("inspector")) {
+                response.sendRedirect("dashboard.jsp");
+            }
+            else {
+                /* Do Nothing */
+            }
+        }
+    %>
 
 <div class="container">
   <div class="row">

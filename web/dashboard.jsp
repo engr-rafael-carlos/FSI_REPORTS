@@ -43,6 +43,24 @@ Last Update: August 5, 2015
 
 </head>
 <body>
+    <% /* Checking Session */
+        if(session.getAttribute("user")!= null) {
+            if(session.getAttribute("type").equals("company")) {
+                response.sendRedirect("list.jsp");
+            }
+            else if(session.getAttribute("type").equals("inspector")) {
+                /* continue */
+                //response.sendRedirect("dashboard.jsp");
+            }
+            else {
+                /* Do Nothing */
+            }
+        }
+        else {
+            response.sendRedirect("login.jsp");
+        }
+    %>
+    
     <%fsi.classes.ListData.list_buildings();%>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-default navbar-fixed-top" id="navfsi">

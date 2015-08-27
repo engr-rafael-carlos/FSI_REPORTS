@@ -54,6 +54,23 @@ Last Update: August 26, 2015
     <script src="js/application.js"></script>
 </head>
 <body>
+    <% /* Checking Session */
+        if(session.getAttribute("user")!= null) {
+            if(session.getAttribute("type").equals("company")) {
+                /* continue */
+                //response.sendRedirect("list.jsp");
+            }
+            else if(session.getAttribute("type").equals("inspector")) {
+                response.sendRedirect("dashboard.jsp");
+            }
+            else {
+                /* Do Nothing */
+            }
+        }
+        else {
+            response.sendRedirect("login.jsp");
+        }
+    %>
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-default navbar-fixed-top" id="navfsi">
@@ -232,11 +249,6 @@ Last Update: August 26, 2015
                         </div>
                         <div class="form-group">
                             <input class="form-control" placeholder="Inspector ID" maxlength="255" id="b_update_iid" name="b_update_iid" />
-<!--                            <select class="form-control" id="b_update_iid" name="b_update_iid">
-                                <c:forEach items="<%//=fsi.classes.Variables.getInstance().getList_of_inspector()%>" var="d">
-                                <option value="">yep</option>
-                                </c:forEach> 
-                            </select> -->
                         </div>
                         <div class="form-group">
                             <div class='input-group date' id='datetimepicker2'>
@@ -356,7 +368,6 @@ Last Update: August 26, 2015
                     easing: "easeInOutExpo",
                     type: "jquery"
                 },
-                defaultTab: "tab1"
             });
 
             /* jQuery activation and setting options for nested tabs with class selector*/
@@ -366,7 +377,6 @@ Last Update: August 26, 2015
                 style: "underlined",
                 rounded: false,
                 shadows: false,
-                defaultTab: "tab1",
                 animation: {
                     easing: "easeInOutExpo",
                     effects: "slideH",

@@ -55,23 +55,24 @@ public class LoginServlet extends HttpServlet {
                 /* Set Data */
                 //var.getList_of_inspector();
                 //var.setInspector_dataset(DataEncoder.create_dataset(var.getList_of_inspector(),"inspector_data", 5));
-                
-                RequestDispatcher rd = request.getRequestDispatcher("list.jsp");
-                rd.forward(request, response);
+                response.sendRedirect("list.jsp");
+//                RequestDispatcher rd = request.getRequestDispatcher("list.jsp");
+//                rd.forward(request, response);
 
             } else { /* Inspector Account */
                 /* Initialize Details */
                 ListData.loadInspectorDetails(email);
 
-                RequestDispatcher rd = request.getRequestDispatcher("dashboard.jsp");
-                rd.forward(request, response);
+                response.sendRedirect("dashboard.jsp");
+//                RequestDispatcher rd = request.getRequestDispatcher("dashboard.jsp");
+//                rd.forward(request, response);
             }
         }
         else {
             /* Login Failed */
             RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
             rd.include(request, response);
-
+//            response.sendRedirect("login.jsp");
             out.println("<script type=\"text/javascript\" src=\"src=\"js/application.js\"> </script>");
             out.println("<script>error_message()</script>");
         }
