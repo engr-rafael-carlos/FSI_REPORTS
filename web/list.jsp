@@ -57,7 +57,7 @@ Last Update: August 26, 2015
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-default navbar-fixed-top" id="navfsi">
-        <div class="container">
+        <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#fsir" aria-expanded="false">
@@ -80,7 +80,7 @@ Last Update: August 26, 2015
     <!-- End Navigation Bar -->
 
     <!-- Tabs -->
-    <div class="container mt100 mb70">
+    <div class="container-fluid mt75 mb60">
         <!-- Zozo Tabs Start-->
         <div id="tabbed-nav">
 
@@ -239,13 +239,22 @@ Last Update: August 26, 2015
                             </select> -->
                         </div>
                         <div class="form-group">
-
-                            <input class="form-control" placeholder="Date of Inspection" maxlength="255" id="b_update_doi" name="b_update_doi" />
+                            <div class='input-group date' id='datetimepicker2'>
+                                <input type='text' class="form-control" placeholder="Date of Inspection" maxlength="255" id="b_update_doi" name="b_update_doi"/>
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
                         </div>
                         
                         <!--DateTime Picker-->
                         <div class="form-group">
-                            <input class="form-control" placeholder="Date Inspected" maxlength="255" id="b_update_di" name="b_update_di" />
+                            <div class='input-group date' id='datetimepicker3'>
+                                <input type='text' class="form-control" placeholder="Date Inspected" maxlength="255" id="b_update_di" name="b_update_di"/>
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
                         </div>
                                 
                         <div class="form-group">
@@ -363,7 +372,8 @@ Last Update: August 26, 2015
                     effects: "slideH",
                     type: "jquery"
                 },
-                size: "xlarge"
+                size: "xlarge",
+                rememberState: true 
             });
         });   
     </script>

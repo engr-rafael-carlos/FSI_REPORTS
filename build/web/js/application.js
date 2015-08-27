@@ -29,13 +29,13 @@ function btn_effect() {
         $('.insp_update_btn').click(function(){
             $('#i_modal_update').modal('show');
             var insp_id = $(this).attr('id');
-            var insp_uname = $('.insp_uname_' + insp_id).text();
+            var insp_email = $('.insp_email_' + insp_id).text();
             var insp_name = $('.insp_name_' + insp_id).text();
             var insp_add = $('.insp_add_' + insp_id).text();
             var insp_contact = $('.insp_cont_' + insp_id).text();
 
             document.getElementById('i_update_id').value = insp_id;
-            document.getElementById('i_update_username').value = insp_uname;
+            document.getElementById('i_update_email').value = insp_email;
             document.getElementById('i_update_name').value = insp_name;
             document.getElementById('i_update_address').value = insp_add;
             document.getElementById('i_update_contact').value = insp_contact;
@@ -94,7 +94,19 @@ function btn_effect() {
     //For Add Building
     $(function () {
         $('#datetimepicker1').datetimepicker({
-            pickTime: false,
+            format: 'MM/DD/YYYY'
+        });
+    });
+    
+    //For Edit Building
+    $(function () {
+        $('#datetimepicker2').datetimepicker({
+            format: 'MM/DD/YYYY'
+        });
+    });
+    
+    $(function () {
+        $('#datetimepicker3').datetimepicker({
             format: 'MM/DD/YYYY'
         });
     });

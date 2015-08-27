@@ -97,3 +97,16 @@ function btn_effect() {
             format: 'MM/DD/YYYY'
         });
     });
+    
+    //For Edit Building
+    $(function () {
+        $('#datetimepicker2').datetimepicker({
+            format: 'MM/DD/YYYY'
+        });
+    });
+    
+    $(function () {
+        $('#datetimepicker3').datetimepicker({
+            format: 'MM/DD/YYYY'
+        });
+    });

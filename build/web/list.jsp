@@ -57,7 +57,7 @@ Last Update: August 26, 2015
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-default navbar-fixed-top" id="navfsi">
-        <div class="container">
+        <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#fsir" aria-expanded="false">
@@ -80,7 +80,7 @@ Last Update: August 26, 2015
     <!-- End Navigation Bar -->
 
     <!-- Tabs -->
-    <div class="container mt100 mb70">
+    <div class="container-fluid mt75 mb60">
         <!-- Zozo Tabs Start-->
         <div id="tabbed-nav">
 
@@ -142,7 +142,7 @@ Last Update: August 26, 2015
                             <input class="form-control" maxlength="255" id="i_update_id" name="i_update_id" readonly />
                         </div>
                         <div class="form-group">
-                            <input class="form-control" maxlength="255" id="i_update_username" name="i_update_username" readonly />
+                            <input class="form-control" maxlength="255" id="i_update_email" name="i_update_email" readonly />
                         </div>
                         <div class="form-group">
                             <input class="form-control" placeholder="Name" maxlength="255" id="i_update_name" name="i_update_name" required />
@@ -187,7 +187,7 @@ Last Update: August 26, 2015
                             <input class="form-control" placeholder="Contact No." maxlength="255" name="i_create_contact" required />
                         </div>
                         <div class="form-group">
-                            <input class="form-control" placeholder="Username" maxlength="255" name="i_create_username" required />
+                            <input class="form-control" placeholder="Email" maxlength="255" name="i_create_email" required />
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control" placeholder="Password" maxlength="255" name="i_password" required />
@@ -239,13 +239,22 @@ Last Update: August 26, 2015
                             </select> -->
                         </div>
                         <div class="form-group">
-
-                            <input class="form-control" placeholder="Date of Inspection" maxlength="255" id="b_update_doi" name="b_update_doi" />
+                            <div class='input-group date' id='datetimepicker2'>
+                                <input type='text' class="form-control" placeholder="Date of Inspection" maxlength="255" id="b_update_doi" name="b_update_doi"/>
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
                         </div>
                         
                         <!--DateTime Picker-->
                         <div class="form-group">
-                            <input class="form-control" placeholder="Date Inspected" maxlength="255" id="b_update_di" name="b_update_di" />
+                            <div class='input-group date' id='datetimepicker3'>
+                                <input type='text' class="form-control" placeholder="Date Inspected" maxlength="255" id="b_update_di" name="b_update_di"/>
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
                         </div>
                                 
                         <div class="form-group">
@@ -295,22 +304,17 @@ Last Update: August 26, 2015
                         <div class="form-group">
                             <input class="form-control" placeholder="Inspector ID" maxlength="255" name="b_create_iid" />
                         </div>
-                        
-                        <!--DateTime Picker-->
-                        <div class="form-group">                            
+                        <div class="form-group"> <!--DateTime Picker-->                          
                             <div class='input-group date' id='datetimepicker1'>
                                 <input type='text' class="form-control" placeholder="Date of Inspection" maxlength="255" name="b_create_doi"/>
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
                             </div>
-                        </div>
-                        
-                        
+                        </div>                       
                         <div class="form-group">
                             <input class="form-control" placeholder="Comment" maxlength="255" name="b_create_comm" />
                         </div>
-                        
                         <div class="form-group">
                             <select class="form-control" name="b_create_stat" id="b_create_stat">
                                 <option value="Pending" selected>Pending</option>
@@ -368,7 +372,8 @@ Last Update: August 26, 2015
                     effects: "slideH",
                     type: "jquery"
                 },
-                size: "xlarge"
+                size: "xlarge",
+                rememberState: true 
             });
         });   
     </script>

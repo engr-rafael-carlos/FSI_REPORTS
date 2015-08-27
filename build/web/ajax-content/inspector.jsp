@@ -21,7 +21,7 @@ Last Update: August 26, 2015
             <thead>
                 <tr>
                     <th>Inspector ID</th>
-                    <th>Username</th>
+                    <th>Email</th>
                     <th>Name</th>
                     <th>Address</th>
                     <th>Contact No.</th>
@@ -31,7 +31,7 @@ Last Update: August 26, 2015
             <tfoot>
                 <tr>
                     <td>Inspector ID</td>
-                    <td>Username</td>
+                    <td>Email</td>
                     <td>Name</td>
                     <td>Address</td>
                     <td>Contact No.</td>
@@ -44,7 +44,7 @@ Last Update: August 26, 2015
                     for( int ctr = 0; ctr < data.size(); ctr++ ) {%>
                         <tr>
                             <td class="insp_id_<%=data.get(ctr).get(0)%>"><%=data.get(ctr).get(0)%></td> <!-- inspector id -->
-                            <td class="insp_uname_<%=data.get(ctr).get(0)%>"><%=data.get(ctr).get(1)%></td> <!-- inspector username -->
+                            <td class="insp_email_<%=data.get(ctr).get(0)%>"><%=data.get(ctr).get(1)%></td> <!-- inspector email -->
                             <td class="insp_name_<%=data.get(ctr).get(0)%>"><%=data.get(ctr).get(2)%></td> <!-- inspector name -->
                             <td class="insp_add_<%=data.get(ctr).get(0)%>"><%=data.get(ctr).get(3)%></td> <!-- inspector address -->
                             <td class="insp_cont_<%=data.get(ctr).get(0)%>"><%=data.get(ctr).get(4)%></td> <!-- inspector contact no. -->

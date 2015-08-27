@@ -10,7 +10,7 @@ public class DBConnection {
         Connection conn = null;
 
         /* MYSQL Database Configuration */
-        String url = "jdbc:mysql://localhost:3306/";
+        String url = "jdbc:mysql://192.168.1.16:3306/";
         String dbName = "fsi";
         String driver = "com.mysql.jdbc.Driver";
         String userName = "root";
